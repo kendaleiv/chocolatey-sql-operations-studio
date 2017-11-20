@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sql-operations-studio</id>
+    <title>SQL Operations Studio (preview)</title>
+    <version>0.23.6</version>
+    <authors>Microsoft</authors>
+    <owners>kendaleiv</owners>
+    <summary>SQL Operations Studio (preview)</summary>
+    <description>SQL Operations Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.</description>
+    <projectUrl>https://docs.microsoft.com/en-us/sql/sql-operations-studio</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/kendaleiv/chocolatey-sql-operations-studio/master/logo.png</iconUrl>
+    <tags>sql operations studio</tags>
+    <copyright>Microsoft Corporation</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
