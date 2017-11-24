@@ -10,7 +10,7 @@
     <summary>SQL Operations Studio (preview)</summary>
     <description>SQL Operations Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.</description>
     <projectUrl>https://docs.microsoft.com/en-us/sql/sql-operations-studio</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/kendaleiv/chocolatey-sql-operations-studio/master/logo.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/kendaleiv/chocolatey-sql-operations-studio/424a002a61825cef7d6607e79a3329e38e6d9339/logo.png</iconUrl>
     <tags>sql operations studio</tags>
     <copyright>Microsoft Corporation</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
