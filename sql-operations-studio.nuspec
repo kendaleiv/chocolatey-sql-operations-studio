@@ -12,7 +12,7 @@
     <projectUrl>https://docs.microsoft.com/en-us/sql/sql-operations-studio</projectUrl>
     <projectSourceUrl>https://github.com/Microsoft/sqlopsstudio/</projectSourceUrl>
     <packageSourceUrl>https://github.com/kendaleiv/chocolatey-sql-operations-studio</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/kendaleiv/chocolatey-sql-operations-studio/master/logo.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/kendaleiv/chocolatey-sql-operations-studio/424a002a61825cef7d6607e79a3329e38e6d9339/logo.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/Microsoft/sqlopsstudio/master/LICENSE.txt</licenseUrl>
     <bugTrackerUrl>https://github.com/Microsoft/sqlopsstudio/issues</bugTrackerUrl>
     <tags>sql operations studio</tags>
