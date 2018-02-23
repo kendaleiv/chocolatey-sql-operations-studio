@@ -1,12 +1,36 @@
-﻿$packageName = "sql-operations-studio"
-$url = "https://go.microsoft.com/fwlink/?linkid=862648"
-$toolsDir = Get-ToolsLocation
-$checksum = "4D3E50DC59EC863418B5C8C0647C96A9B13AB92C817B45DD0CD8405DB690471F"
-$checksumType = "sha256"
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyZipPackage -PackageName $packageName -Url $url -UnzipLocation $toolsDir -Checksum $checksum -ChecksumType $checksumType
+$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
+
+$pp = Get-PackageParameters
+$mergeTasks = "!runCode"
+Write-Host "Merge Tasks: `n$mergeTasks"
+
+$packageArgs = @{
+  packageName    = 'sql-operations-studio'
+  fileType       = 'EXE'
+  url64bit       = 'https://go.microsoft.com/fwlink/?linkid=867998'
+
+  softwareName   = 'SQL Operations Studio (preview)'
+
+  checksum64     = '02394DD2F34D6BEF5AD9E61479786CD11E82052DE10E0660FE8D8F051BC01D1D'
+  checksumType64 = 'sha256'
+
+  silentArgs     = "/verysilent /suppressmsgboxes /mergetasks=""$mergeTasks"" /log=""$env:temp\sql-operations-studio.log"""
+  validExitCodes = @(0, 3010, 1641)
+}
+
+Install-ChocolateyPackage @packageArgs
+
+# Remove https://chocolatey.org/packages/sql-operations-studio/0.23.6 if installed
+$toolsDir = Get-ToolsLocation
+$dir = Join-Path $toolsDir "sqlops-windows"
+
+if (Test-Path $dir) {
+  Remove-Item $dir -Recurse
+}
 
 $shortcutPath = Join-Path $([Environment]::GetFolderPath([System.Environment+SpecialFolder]::CommonPrograms)) 'SQL Operations Studio.lnk'
-$targetPath = Join-Path -Path $toolsDir "sqlops-windows" | Join-Path -ChildPath "sqlops.exe"
-
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
+If (Test-Path $shortcutPath) {
+  Remove-Item $shortcutPath
+}
