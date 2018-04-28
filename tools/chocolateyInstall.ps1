@@ -9,11 +9,11 @@ Write-Host "Merge Tasks: `n$mergeTasks"
 $packageArgs = @{
   packageName    = 'sql-operations-studio'
   fileType       = 'EXE'
-  url64bit       = 'https://go.microsoft.com/fwlink/?linkid=870837'
+  url64bit       = 'https://go.microsoft.com/fwlink/?linkid=872717'
 
   softwareName   = 'SQL Operations Studio (preview)'
 
-  checksum64     = 'EDBACCBB095906BEE037A4A6789C8FA4E16798052D1E35DB4F1D97C52AD2EC61'
+  checksum64     = 'D4D5CB0F9C3EA9AF117A5DD49C6078FE3CD348768B641D81BD5CA55BFA8B5A40'
   checksumType64 = 'sha256'
 
   silentArgs     = "/verysilent /suppressmsgboxes /mergetasks=""$mergeTasks"" /log=""$env:temp\sql-operations-studio.log"""
